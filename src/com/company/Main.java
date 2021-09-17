@@ -13,16 +13,16 @@ class Book {
     public Book() {
     }
 
-    public String GetAuthor(String author){
-        return author;
+    public String GetAuthor(){
+        return Author;
     }
 
-    public String GetName(String name){
-        return name;
+    public String GetName(){
+        return Name;
     }
 
-    public int GetYear(int year){
-        return year;
+    public int GetYear(){
+        return Year;
     }
 
     public void SetAuthor(String author){
@@ -51,15 +51,15 @@ class Book {
         String answer = a.nextLine();
         if ("год".equals(answer)) {
             year = a.nextInt();
-            GetYear(year);
+            GetYear();
             SetYear(year);
         } else if ("имя".equals(answer)) {
             name = a.nextLine();
-            GetName(name);
+            GetName();
             SetName(name);
         } else if ("автор".equals(answer)) {
             author = a.nextLine();
-            GetAuthor(author);
+            GetAuthor();
             SetAuthor(author);
         } else {
             System.out.println("Видимо ничего.");
@@ -73,14 +73,14 @@ public class Main {
         Book newBook = new Book(); // создание объекта
         Scanner in = new Scanner(System.in);
         String name = in.nextLine();
-        newBook.GetName(name);
+        newBook.GetName();
         newBook.SetName(name);
         String author = in.nextLine();
-        newBook.GetAuthor(author);
+        newBook.GetAuthor();
         newBook.SetAuthor(author);
         int year;
         year = in.nextInt();
-        newBook.GetYear(year);
+        newBook.GetYear();
         newBook.SetYear(year);
         newBook.displayInfo();
 
